@@ -1,11 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Homescreen from "./components/Homescreen";
 
 function App() {
   return (
     <div className="App">
-      <h1>WE ARE BUILDING YEFLIX</h1>
+      <Homescreen />
     </div>
   );
 }
