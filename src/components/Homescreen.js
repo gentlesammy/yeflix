@@ -3,6 +3,7 @@ import "./styles/Homescreen.css";
 import Navbar from "./components/navbar";
 import Banner from "./components/banner";
 import RowMovies from "./components/rowMovies";
+import links from "../hooks/links";
 const Homescreen = () => {
   return (
     <div className="homescreen_container">
@@ -12,7 +13,46 @@ const Homescreen = () => {
       <Banner />
 
       {/* row  section*/}
-      <RowMovies />
+      <RowMovies
+        title="Netflix Originals"
+        fetchUrl={links.fetchNetflixOriginals}
+        isLarge={true}
+      />
+      <RowMovies
+        title="Action Movies"
+        fetchUrl={links.fetchActionMovies}
+        isLarge={true}
+      />
+      <RowMovies
+        title="Comedy Movies"
+        fetchUrl={links.fetchComedyMovies}
+        isLarge={true}
+      />
+      <RowMovies
+        title="Documentaries"
+        fetchUrl={links.fetchDocumentaries}
+        isLarge={true}
+      />
+      <RowMovies
+        title="Horror Movies"
+        fetchUrl={links.fetchHorrorMovies}
+        isLarge={true}
+      />
+      <RowMovies
+        title="Romantic Movies"
+        fetchUrl={links.fetchRomanticMovies}
+        isLarge={true}
+      />
+      <RowMovies
+        title="Top Rated Movies"
+        fetchUrl={links.fetchTopRtaed}
+        isLarge={true}
+      />
+      <RowMovies
+        title="Trending Movies"
+        fetchUrl={links.fetchTrending}
+        isLarge={true}
+      />
     </div>
   );
 };
