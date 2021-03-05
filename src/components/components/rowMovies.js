@@ -13,7 +13,6 @@ const RowMovies = ({ title, fetchUrl, isLarge }) => {
 
     fetchData();
   }, [fetchUrl]);
-
   return (
     <div className="row_section">
       <h2>{title} </h2>
