@@ -33,7 +33,10 @@ const Banner = () => {
       }}
     >
       <div className="banner_content">
-        <h1 className="banner_title"> {movies ? movies.original_title : ""}</h1>
+        <h1 className="banner_title">
+          {" "}
+          {movies ? movies.original_title : "Yeflix World"}
+        </h1>
         <div className="banner_buttons">
           <button className="play_buttons banner_button"> Play </button>
           <button className="playlist_buttons banner_button">
@@ -42,7 +45,12 @@ const Banner = () => {
           </button>
         </div>
         <p className="banner_description">
-          {truuncateDesc(movies ? movies.overview : "", 150)}
+          {truuncateDesc(
+            movies
+              ? movies.overview
+              : "We give you best  of movies that is best for your taste buds, we mean your eye bud!",
+            150
+          )}
         </p>
       </div>
     </div>

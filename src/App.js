@@ -1,22 +1,30 @@
 import { useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { auth } from "./firebase/firebase";
-import "./App.css";
 import Homescreen from "./components/Homescreen";
 import Loginscreen from "./components/Loginscreen";
-import { selectUser } from "./features/userSlice";
-import { useSelector } from "react-redux";
+import Profilescreen from "./components/Profilescreen";
+
+import { selectUser, logoutUser, loginUser } from "./features/userSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 function App() {
   const user = useSelector(selectUser);
+  const dispatch = useDispatch();
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((userAuth) => {
       if (userAuth) {
         //user is logged in
         console.log("onikan", userAuth);
+        dispatch(
+          loginUser({
+            userId: userAuth.uid,
+            email: userAuth.email,
+          })
+        );
       } else {
         //user is not logged in
-        console.log("null");
+        dispatch(logoutUser);
       }
     });
     return unsubscribe;
@@ -29,6 +37,9 @@ function App() {
           <Loginscreen />
         ) : (
           <Switch>
+            <Route path="/profile" exact>
+              <Profilescreen />
+            </Route>
             <Route path="/" exact>
               <Homescreen />
             </Route>
