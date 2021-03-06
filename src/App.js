@@ -4,9 +4,11 @@ import { auth } from "./firebase/firebase";
 import "./App.css";
 import Homescreen from "./components/Homescreen";
 import Loginscreen from "./components/Loginscreen";
+import { selectUser } from "./features/userSlice";
+import { useSelector } from "react-redux";
 
 function App() {
-  const user = null;
+  const user = useSelector(selectUser);
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((userAuth) => {
       if (userAuth) {
