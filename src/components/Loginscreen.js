@@ -39,7 +39,7 @@ const Loginscreen = () => {
                   className="loginscreen_subscribe_btn"
                   onClick={signInAction}
                 >
-                  Start Using
+                  Start
                 </button>
               </div>
             </div>
