@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+.profilescreen_container {
+  position: relative;
+  height: 100vh;
+}
+.profilescreen_body {
+  margin-top: 100px;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  text-align: justify;
+  max-width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profilescreen_icon {
+  color: red;
+  background: transparent;
+  width: 32px;
+  height: 32px;
+  fill: black;
+}
+
+.profilescreen_logout_button {
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  padding: 8px 20px;
+  font-weight: 600;
+  border: none;
+  font-size: 1rem;
+  background-color: #111;
+  border: none;
+  color: rgb(241, 173, 173);
+  transition: 0.56s;
+  cursor: pointer;
+}
+
+.profilescreen_logout_button:hover {
+  color: #111;
+  background-color: rgb(241, 173, 173);
+}

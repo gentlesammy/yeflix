@@ -24,11 +24,11 @@ function App() {
         );
       } else {
         //user is not logged in
-        dispatch(logoutUser);
+        dispatch(logoutUser());
       }
     });
     return unsubscribe;
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="App">
