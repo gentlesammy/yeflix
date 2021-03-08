@@ -26,17 +26,23 @@ const Profilescreen = () => {
             />
           </svg>
           <div className="profilescreen_detail">
-            <h2>{user.email}</h2>
+            <h3>{user.email}</h3>
             <div className="profilescreen_plans">
-              <button
-                className="profilescreen_logout_button"
-                onClick={() => {
-                  auth.signOut();
-                }}
-              >
-                Logout
-              </button>
+              <h4 className="profilescreen_current_plan">
+                Plans (Current Plan: Premium)
+              </h4>
+              <p className="profilescreen_plan_renewal">
+                Renewal Date: <span>04/03/2021</span>
+              </p>
             </div>
+            <button
+              className="profilescreen_logout_button"
+              onClick={() => {
+                auth.signOut();
+              }}
+            >
+              Logout
+            </button>
           </div>
         </div>
       </div>

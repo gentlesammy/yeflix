@@ -4,6 +4,7 @@ import Navbar from "./components/navbar";
 import Banner from "./components/banner";
 import RowMovies from "./components/rowMovies";
 import links from "../hooks/links";
+import Footer from "./components/footer";
 const Homescreen = () => {
   return (
     <div className="homescreen_container">
@@ -53,6 +54,7 @@ const Homescreen = () => {
         fetchUrl={links.fetchTrending}
         isLarge={true}
       />
+      <Footer />
     </div>
   );
 };

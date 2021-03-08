@@ -1,0 +1,26 @@
+.footer_container {
+  box-sizing: border-box;
+  padding: 20px 0px;
+  background: black;
+  color: wheat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer_app_detail {
+  max-width: 300px;
+  line-height: 1.3rem;
+  text-align: justify;
+  margin: 20px 10px;
+}
+
+.footer_container img {
+  width: 80%;
+  max-width: 200px;
+}
+
+.footer_container a {
+  color: white;
+  text-decoration: none;
+}
